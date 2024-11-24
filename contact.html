@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Site de vente de fleurs de l'entreprise BloomPetals">
+        <meta name="author" content="Noa Cengarle">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bloompetals.css">
+        <link rel="shortcut icon" href="Fleurs/favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>BloomPetals</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="nav-link">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="entreprise.html">Entreprise</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="responsive">
+                    <input type="checkbox" id="menu-hamburger">
+                    <label for="menu-hamburger"></label>
+                </div>
+                <form class="search">
+                    <input type="text" placeholder="Rechercher..">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Vous êtes à un clic de faire plaisir !</h2>
+            <form class="commande">
+                <label>Civilité</label>
+                <select>
+                    <option>--Choisissez votre civilité--</option>
+                    <option>Monsieur</option>
+                    <option>Madame</option>
+                    <option>Mx</option>
+                </select>
+
+                <label>Prénom et nom</label>
+                <input class="form" type="text" placeholder="Votre prénom et nom de famille..">
+            
+                <label>Adresse</label>
+                <input class="form" type="text" placeholder="Votre adresse..">
+
+                <textarea placeholder="Votre commande.."></textarea>
+
+                <label class="checkbox"><input type="checkbox"/> En soumettant ce formulaire, 
+                    j'accepte que les informations saisies soient utilisées dans le cadre 
+                    de la relation commerciale qui découle de cette demande.</label>
+
+                <input class="submit" type="submit">
+            </form>
+        </main>
+
+        <footer>
+            <p class="copyright">BloomPetals © 2024 - Tous droits réservés.</p>
+        </footer>
+    </body>
+    <script>
+        const menuHamburger = document.querySelector("#menu-hamburger")
+        const navLinks = document.querySelector(".nav-link")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</html>
